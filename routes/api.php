@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\Admin\LoginController;
+use App\Http\Controllers\Api\Admin\TagController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,5 +28,8 @@ Route::prefix('admin')->group(function() {
         Route::get('/refresh', [LoginController::class, 'refreshToken']);
         // Logout
         Route::post('/logout', [LoginController::class, 'logout']);
+
+        // Tags
+        Route::apiResource('/tags',TagController::class);
     });
 });
