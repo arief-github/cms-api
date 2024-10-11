@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\Admin\LoginController;
 use App\Http\Controllers\Api\Admin\TagController;
 use App\Http\Controllers\Api\Admin\CategoryController;
+use App\Http\Controllers\Api\Admin\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,5 +36,8 @@ Route::prefix('admin')->group(function() {
 
         // Category
         Route::apiResource('/categories', CategoryController::class);
+
+        // Posts
+        Route::apiResource('/posts', PostController::class);
     });
 });
