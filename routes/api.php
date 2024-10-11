@@ -6,6 +6,7 @@ use App\Http\Controllers\Api\Admin\LoginController;
 use App\Http\Controllers\Api\Admin\TagController;
 use App\Http\Controllers\Api\Admin\CategoryController;
 use App\Http\Controllers\Api\Admin\PostController;
+use App\Http\Controllers\Api\Admin\MenuController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,5 +40,8 @@ Route::prefix('admin')->group(function() {
 
         // Posts
         Route::apiResource('/posts', PostController::class);
+
+        // Menu
+        Route::apiResource('/menus', MenuController::class);
     });
 });
