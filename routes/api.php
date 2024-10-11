@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\Admin\LoginController;
 use App\Http\Controllers\Api\Admin\TagController;
+use App\Http\Controllers\Api\Admin\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,5 +32,8 @@ Route::prefix('admin')->group(function() {
 
         // Tags
         Route::apiResource('/tags',TagController::class);
+
+        // Category
+        Route::apiResource('/categories', CategoryController::class);
     });
 });
