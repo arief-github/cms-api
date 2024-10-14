@@ -8,6 +8,7 @@ use App\Http\Controllers\Api\Admin\CategoryController;
 use App\Http\Controllers\Api\Admin\PostController;
 use App\Http\Controllers\Api\Admin\MenuController;
 use App\Http\Controllers\Api\Admin\SliderController;
+use App\Http\Controllers\Api\Admin\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,5 +48,8 @@ Route::prefix('admin')->group(function() {
 
         // Slider
         Route::apiResource('/sliders', SliderController::class);
+
+        // User
+        Route::apiResource('/users', UserController::class);
     });
 });
