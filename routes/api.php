@@ -7,6 +7,7 @@ use App\Http\Controllers\Api\Admin\TagController;
 use App\Http\Controllers\Api\Admin\CategoryController;
 use App\Http\Controllers\Api\Admin\PostController;
 use App\Http\Controllers\Api\Admin\MenuController;
+use App\Http\Controllers\Api\Admin\SliderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,5 +44,8 @@ Route::prefix('admin')->group(function() {
 
         // Menu
         Route::apiResource('/menus', MenuController::class);
+
+        // Slider
+        Route::apiResource('/sliders', SliderController::class);
     });
 });
