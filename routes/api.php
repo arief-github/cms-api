@@ -9,6 +9,7 @@ use App\Http\Controllers\Api\Admin\PostController;
 use App\Http\Controllers\Api\Admin\MenuController;
 use App\Http\Controllers\Api\Admin\SliderController;
 use App\Http\Controllers\Api\Admin\UserController;
+use App\Http\Controllers\Api\Admin\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,8 @@ Route::prefix('admin')->group(function() {
 
     // Group dengan prefix auth
     Route::group(['middleware' => 'auth:api'], function () {
+        // Dashboards
+        Route::get('/dashboard', [DashboardController::class, 'index']);
        // GET data USER
         Route::get('/user', [LoginController::class, 'getUser']);
         // Refresh JWT Token
